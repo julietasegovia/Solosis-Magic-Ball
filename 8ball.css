@@ -1,0 +1,112 @@
+@font-face {
+  font-family: pixelfont;
+  src: url(Pix32.ttf);
+}
+
+body{
+    font-family: pixelfont;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#type-here{
+  width: 600px;
+  height: 30px;
+  z-index: 4;
+  font-family: pixelfont;
+  border: 2px solid black;
+  cursor: text;
+  font-size: 20px;
+  color: rgb(41, 39, 39);
+  text-align: center;
+}
+
+#ask-solosis{
+  width: 200px;
+  height: 30px;
+  font-family: pixelfont;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@keyframes rotation-back{
+  50%{
+    scale:1.25;
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation-front{
+  50%{
+    scale:1.25;
+    display: none;
+  }
+  100%{
+    transform: rotate(360deg);
+    display: none;
+  }
+}
+
+.solosis{
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 20px auto;
+}
+
+#solosis-front, #solosis-back, #the-magic{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#solosis-back{
+  z-index: 2;
+}
+
+.solosis-back-clicked{
+  animation-name: rotation-back;
+  animation-duration: 3s;
+}
+
+.solosis-front-clicked{
+  animation-name: rotation-front;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+#the-magic{
+  z-index: 1;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+}
+
+#solosis-front{
+  z-index: 3;
+  pointer-events: none;
+}
+
+#the-wisdom{
+  height: 40px;
+  width: 100px;
+  padding: 310px 240px;
+  font-size: 20px;
+}
