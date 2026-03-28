@@ -16,10 +16,12 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 #type-here{
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   height: 30px;
   z-index: 4;
   font-family: pixelfont;
@@ -32,6 +34,7 @@ body{
 
 #ask-solosis{
   width: 200px;
+  max-width: 100%;
   height: 30px;
   font-family: pixelfont;
   font-size: 20px;
@@ -64,8 +67,9 @@ body{
 
 .solosis{
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
   margin: 20px auto;
 }
 
